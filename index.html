@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENTRY DETAILS</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <style>
+      .form-container {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.427);
+        border-radius: 20px;
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="form-container">
+        <h4 class="text-center mb-4">ENTRY DETAILS</h4>
+        <form id="submit-to-google-sheet">
+          <div class="form-group">
+            <label class="label">M/C IN DATE</label>
+            <div class="control">
+              <input
+                class="form-control"
+                type="date"
+                placeholder="date"
+                name="M/C IN DATE"
+              />
+            </div>
+          </div>
+            <div class="form-group">
+              <label class="label">M/C IN TIME</label>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="time"
+                  placeholder="Your Date of Birth"
+                  name="M/C IN TIME"
+                />
+              </div>
+            </div>
+                <div class="form-group">
+                    <label for="name">CUSTOMER NAME:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="CUSTOMER NAME"
+                      id="name"
+                      placeholder="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="slip">PHONE NUMBER 1:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="PHONE NUMBER 1"
+                      id="contact_number"
+                      placeholder="Contact Number"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="slip">PHONE NUMBER 2:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="PHONE NUMBER 2"
+                      id="contact_number"
+                      placeholder="Contact Number"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="loc">CUSTOMER ADDRESS:</label>
+                    <textarea
+                      class="form-control"
+                      name="CUSTOMER ADDRESS"
+                      id="message"
+                      placeholder="ADDRESS"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="loc">WORKING ADDRESS:</label>
+                    <textarea
+                      class="form-control"
+                      name="WORKING ADRESS"
+                      id="message"
+                      placeholder="ADDRESS"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="loc">M/C NAME:</label>
+                    <textarea
+                      class="form-control"
+                      name="M/C NAME"
+                      id="message"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                  <div class="form-group">
+                    <label class="label">DEPOSITE AMOUNT:</label>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="number"
+                        placeholder="number"
+                        name="DEPOSITE AMOUNT"
+                      />
+                    </div>
+                                    <div class="form-group">
+                                        <label for="loc">PAYMENT METHORD:</label>
+                                        <select class="form-control" name="PAYMENT METHORD" id="PAYMENT METHORD" required>
+                                          <option value="" disabled selected hidden>Choose...</option>
+                                          <option value="CASH">CASH</option>
+                                          <option value="BANK">BANK</option>
+                                          <option value="GPAY">GPAY</option>
+                                          <option value="PHONE PAY">PHONE PAY</option>
+                                          <option value="PAYTM">PAYTM</option>
+                                          <option value="OTHER UPI">OTHER UPI</option>
+                                        </select>
+                                      </div>
+                                    <div class="form-group">
+                                      <label class="label">PER DAY RENT:</label>
+                                      <div class="form-group">
+                                        <input
+                                          class="form-control"
+                                          type="number"
+                                          placeholder="per day rent"
+                                          name="PER DAY RENT"
+                                        />
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="label">RETRUN DATE</label>
+                                        <div class="control">
+                                          <input
+                                            class="form-control"
+                                            type="date"
+                                            placeholder="date"
+                                            name="RETRUN DATE"
+                                          />
+                                        </div>
+          <div class="form-group form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="age" />
+            <label class="form-check-label" for="age"
+              >confirm the information</label
+            >
+          </div>
+          <div class="form-group form-check">
+            <input class="form-check-input" type="checkbox" id="ex" required />
+            <label class="form-check-label" for="ex"
+              >agree the details
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const scriptURL =                       
+      "https://script.google.com/macros/s/AKfycby1BN_qyJNvP8zU8DqnPi1LYAGk0HBNPH_zKpo1-LeMGHGIiSzwDxkjzzdptYqv9AiY/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+        var ex = document.getElementById("ex").checked;
+        var age = document.getElementById("age").checked;
+
+        if (age) {
+          formData.append("age", "Yes");
+        } else {
+          formData.append("age", "No");
+        }
+        if (ex) {
+          formData.append("ex", "Yes");
+        } else {
+          formData.append("ex", "No");
+        }
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Submitted Successfully.", "success");
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. please try again!", "error");
+          });
+      });
+    </script>
+  </body>
+</html>
